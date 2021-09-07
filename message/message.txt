@@ -1,0 +1,225 @@
+<style>
+
+/* live chat css start here */
+
+.live_chat {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+}
+
+.live_chat .chat-btn {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    cursor: pointer;
+    width: 65px;
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px 100px 0px 100px;
+    background-color: #ef6e10;
+    color: #fff;
+    font-size: 22px;
+    border: none;
+    box-shadow: 0 0 9px 2px rgb(0 0 0 / 60%);
+}
+
+.live_chat .chat-btn .close {
+    display: none
+}
+
+.live_chat .chat-btn .font_icon {
+    transition: all 0.9s ease
+}
+
+.live_chat #check:checked~.chat-btn .font_icon {
+    display: block;
+    pointer-events: auto;
+    transform: rotate(180deg)
+}
+
+.live_chat #check:checked~.chat-btn .comment {
+    display: none
+}
+
+.live_chat .chat-btn .font_icon {
+    font-size: 28px;
+    color: #fff !important
+}
+
+.live_chat .wrapper {
+    position: absolute;
+    right: 20px;
+    bottom: 70px;
+    width: 300px;
+    background-color: #fff;
+    border-radius: 5px;
+    opacity: 0;
+    display: none;
+    transition: all 0.4s;
+    box-shadow: 0 0 10px 0 rgb(0 0 0 / 50%);
+}
+
+.live_chat #check:checked~.wrapper {
+    opacity: 1;
+    display: block;
+}
+
+.live_chat .header {
+    padding: 13px;
+    background-color: #ef6e10;
+    border-radius: 5px 5px 0px 0px;
+    margin-bottom: 10px;
+    color: #fff
+}
+
+.live_chat .chat-form {
+    padding: 15px
+}
+
+.live_chat .chat-form input, .live_chat textarea, .live_chat button {
+    margin-bottom: 10px
+}
+
+.chat-form textarea {
+    resize: none
+}
+
+.live_chat .form-control:focus, .live_chat .btn:focus {
+    box-shadow: none
+}
+
+.live_chat .btn, .live_chat .btn:focus, .live_chat .btn:hover {
+    background-color: #ef6e10;
+    border: #ef6e10
+}
+
+.live_chat #check {
+    display: none !important
+}
+
+.iti__country-list {
+    width: 270px;
+}
+
+span.iti__country-name {
+    font-size: 13px;
+    font-weight: 500;
+}
+
+span.iti__country-name {
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.telegram_btn {
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    bottom: 30px;
+    left: 15px;
+    font-size: 14px;
+    transition: bottom 0.2s;
+    border-radius: 50%;
+    box-shadow: 0 0 9px 2px rgb(0 0 0 / 60%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #31a9dd;
+    z-index: 999;
+}
+
+.telegram_btn .font_icon {
+    font-size: 25px;
+    color: #fff;
+}
+
+.floating-wpp {
+    z-index: 999;
+}
+
+.intl-tel-input {
+    display: table-cell;
+}
+
+.intl-tel-input .selected-flag {
+    z-index: 4;
+}
+
+.intl-tel-input .country-list {
+    z-index: 5;
+}
+
+.input-group .intl-tel-input .form-control {
+    border-top-left-radius: 4px;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 0;
+}
+
+/* live chat css close here */
+</style>
+
+ <!-- live chat box start here -->
+    <div class="live_chat">
+        <input type="checkbox" id="check">
+        <label class="chat-btn" for="check">
+            <!-- <i class="fa fa-commenting-o comment"></i> -->
+            <i class="far fa-comment-dots comment font_icon"></i>
+            <i class="fas fa-times close font_icon"></i>
+        </label>
+        <div class="wrapper">
+            <div class="header">
+                <h6 class="mb-0">Contact with us</h6>
+            </div>
+            <!-- <div class="text-center p-2"> <span>Please fill out the form to start chat!</span> </div> -->
+            <form class="chat-form">
+                <div class="mb-3">
+                    <input type="text" class="form-control" placeholder="Name">
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control" placeholder="Email">
+                </div>
+                <div class="mb-3">
+                    <input type="tel" class="form-control" id="phone" name="phone">
+                </div>
+                <div class="mb-3">
+                    <textarea class="form-control" placeholder="Write Your Message"></textarea>
+                </div>
+                <button class="btn btn-success btn-block">Send Message</button>
+            </form>
+        </div>
+    </div>
+    <!-- live chat box start here -->
+
+
+<script>
+
+// *************************************************
+var input = document.querySelector("#phone");
+window.intlTelInput(input, {
+	// allowDropdown: false,
+	// autoHideDialCode: false,
+	// autoPlaceholder: "off",
+	// dropdownContainer: document.body,
+	// excludeCountries: ["us"],
+	// formatOnDisplay: false,
+	// geoIpLookup: function(callback) {
+	//   $.get("http://ipinfo.io", function() {}, "jsonp").always(function(resp) {
+	//     var countryCode = (resp && resp.country) ? resp.country : "";
+	//     callback(countryCode);
+	//   });
+	// },
+	// hiddenInput: "full_number",
+	// initialCountry: "auto",
+	localizedCountries: { 'de': 'Deutschland' },
+	// nationalMode: false,
+	onlyCountries: ['in', 'us', 'gb', 'ch', 'ca', 'do'],
+	// placeholderNumberType: "MOBILE",
+	preferredCountries: ['in', 'us'],
+	separateDialCode: true,
+	utilsScript: "build/js/utils.js",
+});
+</script>

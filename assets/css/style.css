@@ -1,0 +1,1775 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    line-height: 22px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+::selection {
+    background: #a90c23;
+    color: #fff;
+}
+
+header {
+    background: #333;
+}
+
+.top_head {
+    display: flex;
+    padding: 5px 30px;
+}
+
+.top_head a {
+    color: #fff;
+    font-size: 14px;
+}
+
+/* ***************************** */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.dropdown-menu.show {
+    -webkit-animation: fadeIn 0.3s alternate;
+    /* Safari 4.0 - 8.0 */
+    animation: fadeIn 0.3s alternate;
+}
+
+/* Mega Menu adjustments */
+
+.nav-item.dropdown.dropdown-mega {
+    position: static;
+}
+
+.nav-item.dropdown.dropdown-mega .dropdown-menu {
+    width: 90%;
+    top: auto;
+    left: 5%;
+}
+
+/* Complete styles for main navbar toggler and hamburger menu */
+
+.navbar-toggler {
+    border: none;
+    padding: 0;
+    outline: none;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.navbar-toggler .hamburger-toggle {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    z-index: 11;
+    float: right;
+}
+
+.navbar-toggler .hamburger-toggle .hamburger {
+    position: absolute;
+    transform: translate(-50%, -50%) rotate(0deg);
+    left: 50%;
+    top: 50%;
+    width: 50%;
+    height: 50%;
+    pointer-events: none;
+}
+
+.navbar-toggler .hamburger-toggle .hamburger span {
+    width: 100%;
+    height: 4px;
+    position: absolute;
+    background: #333;
+    border-radius: 2px;
+    z-index: 1;
+    transition: transform 0.2s cubic-bezier(0.77, 0.2, 0.05, 1.0), background 0.2s cubic-bezier(0.77, 0.2, 0.05, 1.0), all 0.2s ease-in-out;
+    left: 0px;
+}
+
+.navbar-toggler .hamburger-toggle .hamburger span:first-child {
+    top: 10%;
+    transform-origin: 50% 50%;
+    transform: translate(0% -50%) !important;
+}
+
+.navbar-toggler .hamburger-toggle .hamburger span:nth-child(2) {
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.navbar-toggler .hamburger-toggle .hamburger span:last-child {
+    left: 0px;
+    top: auto;
+    bottom: 10%;
+    transform-origin: 50% 50%;
+}
+
+.navbar-toggler .hamburger-toggle .hamburger.active span {
+    position: absolute;
+    margin: 0;
+}
+
+.navbar-toggler .hamburger-toggle .hamburger.active span:first-child {
+    top: 45%;
+    transform: rotate(45deg);
+}
+
+.navbar-toggler .hamburger-toggle .hamburger.active span:nth-child(2) {
+    left: 50%;
+    width: 0px;
+}
+
+.navbar-toggler .hamburger-toggle .hamburger.active span:last-child {
+    top: 45%;
+    transform: rotate(-45deg);
+}
+
+.icons {
+    display: inline-flex;
+    margin-left: auto;
+}
+
+.icons a {
+    transition: all 0.2s ease-in-out;
+    padding: 0.2rem 0.4rem;
+    color: #ccc !important;
+    text-decoration: none;
+}
+
+.icons a:hover {
+    color: white;
+    text-shadow: 0 0 30px white;
+}
+
+/* ***************************** */
+
+.nav_menu {
+    background: #010001;
+    border-bottom: none;
+    padding: 20px 0;
+    transition-duration: 0.6s;
+}
+
+.navbar-default .navbar-brand, .navbar-default .navbar-nav>li>a {
+    color: #183532;
+}
+
+.log_img {
+    width: 180px;
+}
+.navbar-scroll {
+    background: #ffffff;
+    padding: 5px 0;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.4);
+    transition-duration: 0.6s;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+.nav-dropdown-scroll {
+    background: #e7eaea;
+    box-shadow: 0px 10px 9px rgba(0, 0, 0, 0.4);
+}
+
+.nav_menu .nav-link {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.nav_menu.navbar-scroll .nav-link {
+    color: #333;
+    font-weight: 600;
+}
+
+.nav_menu .nav-link:hover {
+    color: #a90c23
+}
+
+.nav_menu .nav-item .dropdown-menu {
+    border-radius: 0;
+}
+.nav_menu .nav-item .dropdown-menu a {
+    padding: 5px 3px 5px 20px !important;
+    position: relative;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.nav_menu .nav-item .dropdown-menu a::before {
+    position: absolute;
+    left: -5px;
+    top: 5px;
+    width: 18px;
+    height: 15px;
+}
+
+.nft_menu .dropdown-menu a::before {
+    content: url('../images/nft_menu.png');
+}
+
+.defi_menu .dropdown-menu a::before {
+    content: url('../images/defi_menu.png');
+}
+
+.bsc_menu .dropdown-menu a::before {
+    content: url('../images/bsc_menu.png');
+}
+
+.ico_menu .dropdown-menu a::before {
+    content: url('../images/ico_menu.png');
+}
+
+.token_menu .dropdown-menu a::before {
+    content: url('../images/token_menu.png');
+}
+
+.crypto_menu .dropdown-menu a::before {
+    content: url('../images/crypto_menu.png');
+}
+
+.exchange_menu .dropdown-menu a::before {
+    content: url('../images/exchange_menu.png');
+}
+
+.blockchain_menu .dropdown-menu a::before {
+    content: url('../images/blockchain_menu.png');
+}
+
+.contact_menu .dropdown-menu a::before {
+    content: url('../images/contact_menu.png');
+}
+.contact_menu .dropdown-menu, .exchange_menu .dropdown-menu {
+    right: 0;
+    left: auto;
+}
+.dropdown-menu.shadow {
+    border: 0;
+    box-shadow: 0 0 10px 5px rgb(0 0 0 / 28%) !important;
+}
+/* banner css start here */
+
+.banner_section {
+    position: relative;
+    background: #010001;
+    height: 480px;
+}
+
+.banner_img {
+    position: absolute;
+    right: 25px;
+}
+
+.banner_vid {
+    width: 100%;
+    height: 450px;
+}
+
+.banner_txt {
+    position: relative;
+    display: flex;
+    flex-flow: wrap;
+    /* justify-content: center; */
+    align-items: center;
+    width: 60%;
+    height: 480px;
+}
+
+.banner_txt h3 {
+    color: #fff;
+    font-size: 35px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+}
+
+.banner_txt h3 span {
+    font-size: 80px;
+    display: inline-block;
+    width: 100%;
+}
+
+.banner_txt h3 b {
+    letter-spacing: 28px;
+}
+
+/* banner css close here */
+
+/* blockchain section detail css start here */
+
+.blockchain_detail {
+    padding: 80px 0;
+}
+
+.blchn_heading {
+    margin-bottom: 25px;
+}
+
+.blchn_heading h2 {
+    text-align: center;
+    color: #a90c23;
+    font-weight: 600;
+    font-size: 38px;
+}
+
+.blockchain_content p {
+    text-align: center;
+    font-size: 15px;
+    color: #555;
+    font-weight: 500;
+}
+
+/* 
+.blchn_btn_grp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: wrap;
+}
+
+.blchn_btn_grp .font_icon {
+    font-size: 20px;
+    margin-right: 2px;
+}
+
+.connect_wht_btn {
+    background-color: #10ba18;
+    color: #fff;
+    border: 2px solid #10ba18;
+    border-radius: 0;
+    margin: 5px 15px;
+    font-weight: 500;
+}
+
+.connect_wht_btn:hover {
+    background-color: #fff;
+    color: #10ba18;
+    border: 2px solid #10ba18;
+}
+
+.connect_telgrm_btn {
+    background-color: #0087cb;
+    color: #fff;
+    border: 2px solid #0087cb;
+    border-radius: 0;
+    margin: 5px 15px;
+    font-weight: 500;
+}
+
+.connect_telgrm_btn:hover {
+    background-color: #fff;
+    color: #0087cb;
+    border: 2px solid #0087cb;
+} */
+
+.service_box p {}
+
+/* blockchain section detail css close here */
+
+/* blockchain services start here */
+
+.blockhain_service {
+    padding: 80px 0;
+    background: #f9d8d8;
+}
+
+.service_box {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background: #f9d8d8;
+    margin: 15px auto;
+}
+
+.blockchain_serv_box .row .col-12:nth-child(2n) .service_box {
+    margin-top: 60px;
+}
+
+.blockchain_serv_box p {
+    font-size: 15px;
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    font-weight: 500;
+}
+
+.serv_img {
+    width: 65px;
+    margin: 15px auto;
+}
+
+.service_box h3 {
+    color: #a90c23;
+    font-weight: 600;
+    font-size: 22px;
+}
+
+.service_box p {
+    font-size: 13px;
+    font-weight: 500;
+    color: #555;
+    position: relative;
+    padding-left: 12px;
+    margin-bottom: 5px;
+    text-align: left;
+    width: 100%;
+}
+
+.service_box p::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: rgb(202 17 17 / 22%);
+    width: 3px;
+    height: 100%;
+}
+
+.read_more_link {
+    color: #222;
+    font-weight: 600;
+    font-size: 14px;
+    float: right;
+}
+
+.read_more_link:hover {
+    color: #ca1111;
+}
+
+.home_nft {
+    /* padding: 0 25px; */
+    width: 100%;
+    display: flex;
+}
+
+.nft_box {
+    display: inline-block;
+    width: 100%;
+    padding: 30px 15px;
+    color: #fff;
+    position: relative;
+}
+
+.left_nft {
+    background: #a90c23;
+}
+
+.right_nft {
+    background: #a20118;
+}
+
+.nft_box h4 {
+    font-size: 20px;
+    font-weight: 600;
+    border-bottom: 2px solid #fff;
+    padding: 0 8px 3px 1px;
+    margin-bottom: 18px;
+    width: auto;
+    display: inline-block;
+}
+
+.nft_box p {
+    font-size: 14px;
+    color: #ddd;
+    font-weight: 500;
+}
+
+.home_nft_img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.home_nft_img img {
+    width: 120px;
+    opacity: .4;
+}
+
+.home_nft_text {
+    position: relative;
+}
+
+/* blockchain services close here */
+
+/* trend nft section start here */
+
+.trend_nft {
+    padding: 80px 0;
+}
+
+.trend_nft_box {
+    /* display: flex;
+    flex-flow: wrap;
+    justify-content: center; */
+    width: 150px;
+    margin: 25px auto;
+    align-items: center;
+}
+
+.trd_nft_img {
+    background: linear-gradient( 90deg, rgba(245, 81, 95, 1) 0%, rgba(161, 5, 29, 1) 100%);
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 5px;
+    border-radius: 15px;
+    border: 8px solid #a90c23;
+    box-shadow: inset 0 0 4px 2px rgb(0 0 0 / 50%);
+    transition: .5s all ease;
+}
+
+.trd_nft_img img {
+    width: 55px;
+    display: block;
+    margin: auto;
+}
+
+.trd_nft_img:hover {
+    box-shadow: 0 0 16px 1px rgb(0 0 0 / 60%);
+    transition: .5s all ease;
+}
+
+.trend_nft_box h5 {
+    text-align: center;
+    font-size: 15px;
+    font-weight: 600;
+    color: #a90c23;
+    min-height: 55px;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0;
+}
+
+.trend_all_nft {
+    justify-content: center;
+}
+
+.trend_nft_box:hover .trd_nft_img {
+    border-radius: 50%;
+}
+
+/* trend nft section close here */
+
+/* live chat css start here */
+
+.live_chat {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+}
+
+.live_chat .chat-btn {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    cursor: pointer;
+    width: 65px;
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px 100px 0px 100px;
+    background-color: #a90c23;
+    color: #fff;
+    font-size: 22px;
+    border: none;
+    box-shadow: 0 0 9px 2px rgb(0 0 0 / 60%);
+}
+
+.live_chat .chat-btn .close {
+    display: none
+}
+
+.live_chat .chat-btn .font_icon {
+    transition: all 0.9s ease
+}
+
+.live_chat #check:checked~.chat-btn .font_icon {
+    display: block;
+    pointer-events: auto;
+    transform: rotate(180deg)
+}
+
+.live_chat #check:checked~.chat-btn .comment {
+    display: none
+}
+
+.live_chat .chat-btn .font_icon {
+    font-size: 28px;
+    color: #fff !important
+}
+
+.live_chat .wrapper {
+    position: absolute;
+    right: 20px;
+    bottom: 70px;
+    width: 300px;
+    background-color: #fff;
+    border-radius: 5px;
+    opacity: 0;
+    display: none;
+    transition: all 0.4s;
+    box-shadow: 0 0 10px 0 rgb(0 0 0 / 50%);
+}
+
+.live_chat #check:checked~.wrapper {
+    opacity: 1;
+    display: block;
+}
+
+.live_chat .header {
+    padding: 13px;
+    background-color: #a90c23;
+    border-radius: 5px 5px 0px 0px;
+    margin-bottom: 10px;
+    color: #fff
+}
+
+.live_chat .chat-form {
+    padding: 15px
+}
+
+.live_chat .chat-form input, .live_chat textarea, .live_chat button {
+    margin-bottom: 10px
+}
+
+.chat-form textarea {
+    resize: none
+}
+
+.live_chat .form-control:focus, .live_chat .btn:focus {
+    box-shadow: none
+}
+
+.live_chat .btn, .live_chat .btn:focus, .live_chat .btn:hover {
+    background-color: #a90c23;
+    border: #a90c23
+}
+
+.live_chat #check {
+    display: none !important
+}
+
+.iti__country-list {
+    width: 270px;
+}
+
+span.iti__country-name {
+    font-size: 13px;
+    font-weight: 500;
+}
+
+span.iti__country-name {
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.telegram_btn {
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    bottom: 30px;
+    left: 15px;
+    font-size: 14px;
+    transition: bottom 0.2s;
+    border-radius: 50%;
+    box-shadow: 0 0 9px 2px rgb(0 0 0 / 60%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #31a9dd;
+    z-index: 999;
+}
+
+.telegram_btn .font_icon {
+    font-size: 25px;
+    color: #fff;
+}
+
+.floating-wpp {
+    z-index: 999;
+}
+
+.intl-tel-input {
+    display: table-cell;
+}
+
+.intl-tel-input .selected-flag {
+    z-index: 4;
+}
+
+.intl-tel-input .country-list {
+    z-index: 5;
+}
+
+.input-group .intl-tel-input .form-control {
+    border-top-left-radius: 4px;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 0;
+}
+
+/* live chat css close here */
+
+/* Blockchain Experties section start here */
+
+.blck_experts {
+    padding: 80px 0;
+    background: #f9d8d8;
+}
+
+.experties_logos {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.exprt_box {
+    display: inline-block;
+    margin: 15px 25px;
+}
+
+.exprt_box img {
+    width: 50px;
+}
+
+.exprt_box b {
+    font-size: 14px;
+    margin-left: 5px;
+}
+
+/* Blockchain Experties section close here */
+
+/* choose section start here */
+
+.choose_section {
+    display: inline-block;
+    width: 100%;
+}
+
+.choose_carousel {
+    position: relative;
+    display: flex !important;
+    height: 100%;
+}
+
+.choose_carousel::before {
+    content: '';
+    position: absolute;
+    left: -50px;
+    bottom: -50px;
+    width: 95%;
+    height: 100%;
+    background: #a90c23;
+}
+
+.choose_carousel .owl-stage, .choose_carousel .owl-item {
+    height: 100%;
+}
+
+.choose_carousel .owl-nav, .choose_carousel .owl-dots {
+    display: none;
+}
+
+.choose_carousel .owl-stage-outer {
+    box-shadow: 0 0 10px 0 rgb(0 0 0 / 82%);
+}
+
+.chs_dlider img {
+    height: 100%;
+}
+
+.choose_us_detail {
+    padding: 40px 10px;
+}
+
+.choose_us_detail h3 {
+    font-size: 28px;
+    font-weight: 600;
+    color: #a90c23;
+}
+
+.choose_box {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px auto;
+}
+
+.choose_box:nth-child(2n+1) {
+    flex-direction: row-reverse;
+}
+
+.choose_box_img {
+    width: 220px;
+    margin-right: 15px;
+}
+
+.choose_box_txt {
+    position: relative;
+}
+
+.choose_box_txt p {
+    font-size: 13.5px;
+    font-weight: 500;
+    color: #555;
+}
+
+.choose_box_txt h5 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 3px;
+}
+
+/* choose section close here */
+
+/* counter css start here */
+
+.counter {
+    color: #f27f21;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    height: 190px;
+    max-width: 190px;
+    padding: 30px 25px 25px;
+    margin: 0 auto;
+    border: 3px solid #f27f21;
+    border-radius: 20px 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.counter:before, .counter:after {
+    content: "";
+    background: #f3f3f3;
+    border-radius: 20px;
+    box-shadow: 4px 4px 2px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    bottom: 15px;
+    right: 15px;
+    z-index: -1;
+}
+
+.counter:after {
+    background: transparent;
+    width: 100px;
+    height: 100px;
+    border: 15px solid #f27f21;
+    border-top: none;
+    border-right: none;
+    border-radius: 0 0 0 20px;
+    box-shadow: none;
+    top: auto;
+    left: -10px;
+    bottom: -10px;
+    right: auto;
+}
+
+.counter .counter-icon {
+    font-size: 35px;
+    line-height: 35px;
+    margin: 0 0 15px;
+    transition: all 0.3s ease 0s;
+}
+
+.counter:hover .counter-icon {
+    transform: rotateY(360deg);
+}
+
+.counter .counter-value {
+    color: #555;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 20px;
+    margin: 0 0 20px;
+    display: block;
+    transition: all 0.3s ease 0s;
+}
+
+.counter:hover .counter-value {
+    text-shadow: 2px 2px 0 #d1d8e0;
+}
+
+.counter h3 {
+    font-size: 17px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0 0 15px;
+}
+
+.counter.counter_blue {
+    color: #4accdb;
+    border-color: #4accdb;
+}
+
+.counter.counter_blue:after {
+    border-bottom-color: #4accdb;
+    border-left-color: #4accdb;
+}
+
+.counter.counter_green {
+    color: #68a224;
+    border-color: #68a224;
+}
+
+.counter.counter_green:after {
+    border-bottom-color: #68a224;
+    border-left-color: #68a224;
+}
+
+.counter.counter_purple {
+    color: #9C52A1;
+    border-color: #9C52A1;
+}
+
+.counter.counter_purple:after {
+    border-bottom-color: #9C52A1;
+    border-left-color: #9C52A1;
+}
+
+@media screen and (max-width:990px) {
+    .counter {
+        margin-bottom: 40px;
+    }
+}
+
+section.counter_section {
+    display: inline-block;
+    width: 100%;
+    padding: 60px 0;
+    background: #f9f8f8;
+}
+
+/* counter css close here */
+
+/* marketing css start here */
+
+.markting_section {
+    padding: 80px 0;
+    background: #eee;
+    position: relative;
+}
+
+.markting_section::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 50%;
+    background: #222;
+}
+
+.marktng_box {
+    display: inline-block;
+    width: 100%;
+    background: #ddd;
+    padding: 30px 25px;
+    text-align: center;
+    box-shadow: 0 0 18px 0 rgb(0 0 0 / 60%);
+    border-radius: 8px;
+    position: relative;
+    z-index: 9;
+    margin: 15px auto;
+}
+
+.marktng_box p {
+    margin-bottom: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #555;
+}
+
+.marktng_box h4 {
+    font-size: 23px;
+    font-weight: 500;
+    color: #222;
+}
+
+.marktng_box .mrktng_link {
+    background: #a90c23;
+    color: #fff;
+    padding: 8px 25px;
+    font-size: 15px;
+    display: inline-block;
+    border-radius: 25px;
+    margin-top: 12px;
+    transition: .5s all ease;
+}
+
+.marktng_box .mrktng_link:hover {
+    box-shadow: 2px 6px 5px 0 rgb(169 12 35 / 47%);
+    transition: .5s all ease;
+}
+
+/* marketing css close here */
+
+/* footer section start here */
+
+.footer_section {
+    background: #222;
+    color: #fff;
+    padding: 50px 0;
+    position: relative;
+}
+
+.foot_cont .col-12 {
+    position: relative;
+}
+
+.foot_cont .col-12:not(:last-child):after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background: #eee;
+}
+
+.foot_box h4 {
+    font-size: 20px;
+    color: #fff;
+    display: inline-block;
+    border-bottom: 2px solid #fff;
+    padding-bottom: 4px;
+    margin-bottom: 25px;
+}
+
+.foot_box h5 {
+    padding-left: 8px;
+}
+
+.foot_box p {
+    padding-left: 8px;
+    font-size: 14px;
+    padding-right: 25px;
+}
+
+.foot_bottom ul {
+    display: flex;
+}
+
+.cpyrt_box a {
+    color: #fff;
+    font-size: 14px;
+}
+
+.foot_cmpy a {
+    display: inline-block;
+}
+
+.foot_cmpy img {
+    width: 65px;
+    display: inline-block;
+    height: 100%;
+}
+
+.foot_social_media a {
+    color: #fff;
+    display: inline-block;
+    font-size: 16px;
+}
+
+/* footer section close here */
+
+/* inner page banner css start here */
+
+.page_banner {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner_form {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 0 11px 3px rgb(0 0 0 / 43%);
+    padding: 20px;
+    border-radius: 0;
+    margin: 40px auto;
+}
+
+.banner_form .iti {
+    width: 100%;
+}
+
+.banner_form h4 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 22px;
+    font-weight: 600;
+    position: relative;
+    color: #222;
+}
+
+.page_banner_img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.cont_enq_btn {
+    display: block;
+    margin: auto;
+    padding: 5px 30px;
+    background: #a90c23;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 0;
+    box-shadow: 5px 4px 4px 0 rgb(169 12 35);
+    transition: .5s all ease;
+}
+
+.cont_enq_btn:hover {
+    color: #fff;
+    box-shadow: 0 0 10px 0 rgb(169 12 35);
+    transition: .5s all ease;
+}
+
+.page_about_section {
+    padding: 40px 0;
+}
+
+.abt_page_content {
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+    justify-content: center;
+}
+
+.abt_page_content h2 {
+    font-size: 28px;
+    font-weight: 600;
+    color: #a90c23;
+}
+
+.abt_page_content p {
+    padding-left: 10px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #444;
+}
+
+.abt_page_img {
+    margin-top: 45px;
+}
+
+/* inner page banner css start here */
+
+/* box content css start here */
+
+.box_content {
+    display: inline-block;
+    width: 100%;
+    margin: 15px auto;
+    background: #fff;
+    box-shadow: 0 0 17px 6px rgb(0 0 0 / 35%);
+    border-radius: 0 35px;
+    overflow: hidden;
+    border: 3px solid #fff;
+}
+
+.box_content_txt {
+    padding: 15px 25px;
+}
+
+.box_content_txt p {
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 500;
+    padding-left: 5px;
+    color: #444;
+}
+
+.box_content_txt h5 {
+    color: #a90c23;
+    font-weight: 600;
+    font-size: 22px;
+    border-bottom: 2px solid #a90c23;
+    padding-bottom: 3px;
+    padding-left: 5px;
+}
+
+.page_boxes {
+    display: inline-block;
+    width: 100%;
+    padding: 80px 0;
+    background: #e8dadc;
+}
+
+/* box content css close here */
+
+/* Icon box css start here */
+
+.icon_box_section {
+    padding: 80px 0;
+}
+
+.icon_box_container {
+    display: inline-block;
+    width: 100%;
+    margin: 15px auto;
+    background: #fff;
+    transition: .5s all ease;
+    padding-top: 15px;
+    cursor: pointer;
+}
+
+.icon_box_container:hover {
+    padding-top: 0;
+    transition: .5s all ease;
+}
+
+.icon_bx_img img {
+    width: 120px;
+    display: block;
+    margin: 15px auto;
+}
+
+.icon_bx_txt {
+    padding: 15px;
+    text-align: center;
+}
+
+.icon_bx_txt h5 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: #a90c23;
+}
+
+.icon_bx_txt p {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Icon box css close here */
+
+/* Service Box css start here */
+
+.serv_box {
+    background: #fff;
+    box-shadow: 0 0 10px 0 rgb(0 0 0 / 50%);
+    display: inline-block;
+    width: 100%;
+    margin: 25px auto;
+    height: 350px;
+    overflow: hidden;
+    position: relative;
+    transition: .8s all ease;
+    border-radius: 15px;
+}
+
+.serv_box_img {
+    position: relative;
+}
+
+.serv_box_img::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .5);
+}
+
+.serv_box_img img {
+    height: 380px;
+    width: 100%;
+    transition: .8s all ease;
+}
+
+.serv_box:hover .serv_box_img img {
+    height: 350px;
+    transition: .8s all ease;
+}
+
+.serv_box_txt {
+    position: absolute;
+    left: 0;
+    top: 75%;
+    width: 100%;
+    height: 100%;
+    padding: 25px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-flow: column;
+    color: #fff;
+    text-align: center;
+    transition: .8s all ease;
+}
+
+.serv_box_txt h4 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 18px;
+}
+
+.serv_box:hover .serv_box_txt {
+    top: 0;
+    justify-content: center;
+    transition: .8s all ease;
+}
+
+.serv_box .serv_box_txt p {
+    opacity: 0;
+    transition: .5s all ease;
+}
+
+.serv_box:hover .serv_box_txt p {
+    opacity: 1;
+    transition: .5s all ease;
+    font-size: 14px;
+}
+
+.serv_box_btn {
+    background: #fff;
+    color: #a90c23;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 5px 25px;
+}
+
+.serv_box_btn:hover {
+    background: #a90c23;
+    color: #fff;
+}
+
+/* Service Box css close here */
+
+/* multi section css start here */
+
+.multi_boxes {
+    display: inline-block;
+    width: 100%;
+    /* margin: 25px auto; */
+    padding: 60px 0;
+}
+
+.multi_box_section .multi_boxes:nth-child(2n) {
+    background: #d1d8e0;
+}
+
+.multi_box_section .multi_boxes:nth-child(2n) .row {
+    flex-direction: row-reverse;
+}
+
+.multi_textbox {
+    padding: 15px 15px;
+}
+
+.multi_textbox h4 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #a90c23;
+}
+
+.multi_textbox p {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+/* multi section css close here */
+
+/* faq css start here */
+
+.faq_section {
+    padding: 40px 0;
+}
+
+.faq_box {
+    margin-top: 30px;
+    display: inline-block;
+    width: 100%;
+}
+
+.faq_heading h1 {
+    font-size: 60px;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #a90c23;
+}
+
+.faq_box .accordion-item {
+    margin: 10px auto;
+}
+
+.faq_box .accordion-button {
+    background: #1e6690;
+    color: #fff;
+    border-radius: 25px !important;
+    padding: 12px 25px;
+    box-shadow: inset 0 0 10px 3px rgb(0 0 0 / 50%);
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.faq_box .accordion-button::after {
+    content: "\f0ab";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    flex-shrink: 0;
+    width: 1.25rem;
+    height: 1.25rem;
+    margin-left: auto;
+    color: #fff;
+    background-image: none;
+    transition: transform .2s ease-in-out;
+}
+
+.faq_box .accordion-button:not(.collapsed)::after {
+    background-image: none;
+    /* background-image: url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%230c63e4'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e); */
+    transform: rotate( -180deg);
+    transition: transform .2s ease-in-out;
+}
+
+.faq_box .accordion-body {
+    border-left: 5px solid #1e658e;
+    border-right: 5px solid #1e658e;
+    padding-left: 15px;
+    margin: 0 18px 15px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #555;
+    background: #fff;
+    box-shadow: 0px 6px 10px 0 rgb(0 0 0 / 50%);
+    border-radius: 0 0 25px 25px;
+}
+
+/* faq css close here */
+
+/* contact us css start here */
+
+.contact_us_detail {
+    padding: 80px 0;
+}
+
+.cont_us_heading h2 {
+    color: #a90c23;
+    text-align: center;
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+.cont_info {
+    padding: 20px 0 50px;
+}
+
+.contact_info {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact_img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: #a90c23;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact_img .font_icon {
+    color: #fff;
+    font-size: 25px;
+}
+
+.contact_text {
+    width: calc(100% - 90px);
+    margin-left: auto;
+    padding: 8px 12px 8px 0;
+}
+
+.contact_info {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    box-shadow: 10px 0px 6px 0px rgb(0 0 0 / 50%);
+    border-radius: 50px;
+    margin: 15px auto;
+}
+
+.contact_info a {
+    font-size: 16.5px;
+    font-weight: 500;
+    color: #333;
+}
+
+.contact_enquiy {
+    background: #fff;
+    box-shadow: 0 0 10px 0 rgb(0 0 0 / 50%);
+    padding: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 0 auto 20px;
+}
+
+.contact_enquiy h5 {
+    text-align: center;
+    color: #fff;
+    font-weight: 600;
+    font-size: 20px;
+    background: #a90c23;
+    padding: 8px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 0;
+    box-shadow: 0px 4px 10px 0 rgb(0 0 0 / 50%);
+}
+
+.contact_enquiy form {
+    padding: 20px;
+}
+
+.contact_enquiy .mb-3 {
+    display: flex;
+    align-items: center;
+}
+
+.contact_enquiy .iti {
+    width: 100%;
+}
+
+.contact_enquiy label {
+    font-size: 15px;
+    font-weight: 500;
+    color: #222;
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 0;
+    width: 180px;
+}
+
+.contact_enquiy .form-control {
+    color: #555;
+    font-size: 15px;
+    font-weight: 500;
+    border-bottom: 2px solid #666 !important;
+    border-radius: 0;
+    display: inline-block;
+    width: 100%;
+    border: 0;
+}
+
+.contact_enquiy .form-control:focus {
+    box-shadow: none;
+}
+
+.contact_btn {
+    display: block;
+    border: 1px solid #a90c23;
+    color: #a90c23;
+    font-size: 15px;
+    font-weight: 600;
+    margin: 10px auto 20px;
+    border-radius: 0;
+}
+
+.contact_btn:hover {
+    background: #a90c23;
+    color: #fff;
+}
+
+.head_office {
+    /* padding: 25px 15px; */
+}
+
+.head_office h3 {
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: .6px;
+    color: #a90c23;
+    padding-bottom: 4px;
+    padding-left: 5px;
+}
+
+.head_office p {
+    font-size: 15px;
+    font-weight: 500;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.contact_add {
+    background: #fff;
+    box-shadow: 0 0 10px 0 rgb(0 0 0 / 50%);
+    padding: 15px;
+    border-radius: 15px;
+    min-height: 150px;
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.contact_add::before {
+    content: "\f3c5";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 120px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: .3;
+    color: #a90c23;
+}
+
+.contact_add_text {
+    position: relative;
+}
+
+/* contact us css close here */
+
+/* media query start here */
+
+@media (min-width:991px) and (max-width:1024px) {}
+
+@media (min-width:768px) and (max-width:990px) {
+    div#navbar-content {
+        height: 100vh;
+        overflow: auto;
+    }
+}
+
+@media (min-width:481px) and (max-width:767px) {
+    .top_head {
+        flex-flow: wrap;
+    }
+    /* .nav_menu .dropdown-menu {
+        height: 250px;
+        overflow: auto;
+    } */
+    #navbar-content {
+        height: 100vh;
+        overflow: auto;
+    }
+}
+
+@media (min-width:320px) and (max-width:480px) {
+    div#navbar-content {
+        height: 100vh;
+        overflow: auto;
+    }
+    .nav_menu .navbar-toggler {
+        border-color: #fff;
+        border-radius: 0;
+    }
+    
+    /* .nav_menu .dropdown-menu {
+        height: 250px;
+        overflow: auto;
+    } */
+    .top_head {
+        flex-flow: column;
+    }
+    .top_head .ms-auto {
+        margin-left: inherit !important;
+    }
+    .banner_img {
+        right: 0;
+        top: 0;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .banner_section {
+        height: 380px;
+    }
+    .banner_vid {
+        height: auto;
+    }
+    .banner_txt {
+        width: 100%;
+        height: 380px;
+    }
+    .banner_txt h3 {
+        text-align: center;
+        font-size: 25px;
+    }
+    .banner_txt h3 span {
+        font-size: 50px;
+    }
+    .banner_txt h3 b {
+        letter-spacing: 9px;
+        font-weight: 500;
+    }
+    .home_nft {
+        flex-flow: column;
+    }
+    .choose_us_detail {
+        padding-top: 80px;
+    }
+    .counter_section {
+        padding: 30px 0 !important;
+    }
+    .foot_bottom ul {
+        flex-flow: wrap;
+    }
+    .foot_bottom li {
+        margin: 10px auto;
+    }
+}
+
+/* media query close here */
